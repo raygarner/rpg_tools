@@ -1,0 +1,20 @@
+Abstract
+========
+Simple CLI programs written with providing functions for Chris Gonnermans Basic
+Fantasy RPG in mind.
+Default destination directory for installation is /usr/bin.
+Each program reads input from command line args.
+If given no args or invalid args each program will describe proper usage with a
+short example.
+
+Build:
+$ make
+
+Install:
+$ sudo make install
+
+Uninstall:
+$ sudo make uninstall
+
+repo: https://github.com/raygarner/rpg_tools
+contact: ray@perfectcast.co.uk

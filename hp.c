@@ -7,9 +7,6 @@
 #include "common.h"
 
 #define DEFAULT_HD_SIZE 8
-#define DEFAULT_BONUS 0
-#define DEFAULT_ENTITIES 1
-#define DEFAULT_HD 1
 
 void print_hp(int);
 
@@ -29,15 +26,16 @@ print_hp(int hp)
 int
 main(int argc, char *argv[])
 {
-	int sides, bonus, entities, hd, i;
+	int i;
 
-	sides = (argc < 5) ? DEFAULT_HD_SIZE : atoi(argv[4]);
-	bonus = (argc < 4) ? DEFAULT_BONUS : atoi(argv[3]);
-	entities = (argc < 3) ? DEFAULT_ENTITIES : atoi(argv[2]);
-	hd = (argc < 2) ? DEFAULT_HD : atoi(argv[1]);
+	if (argc < 3) {
+		printf("Please pass HD and number appearing as args\n");
+		printf("eg: hp 2 6\n");
+		return 1;
+	}
 	srand(time(NULL));
-	for (i = 0; i < entities; i++)
-		print_hp(roll(hd, sides) + bonus);
+	for (i = 0; i < atoi(argv[2]); i++)
+		print_hp(roll(atoi(argv[1]), DEFAULT_HD_SIZE));
 	return 0;
 }
 
