@@ -18,3 +18,67 @@ $ sudo make uninstall
 
 repo: https://github.com/raygarner/rpg_tools
 contact: ray@perfectcast.co.uk
+
+
+npc
+===
+NPC generator following the BFRPG core rules. Takes class and level and args.
+
+$ npc m 5
+Level 5 elf magic-user
+STR:  7 (-1)
+INT: 13 (+1)
+WIS:  9 (+0)
+DEX:  9 (+0)
+CON: 11 (+0)
+CHA: 14 (+1)
+HP:   9
+
+
+hp
+==
+HP generator for monster encounters. Assumes HD size of 8. Takes HD count and
+number appearing as args.
+
+$ hp 2 6
+oooo
+ooooo
+oo
+ooooo ooooo ooo
+ooooo ooooo ooooo
+ooooo ooooo
+
+
+dgn
+===
+Dungeon stocker. Takes the number of rooms as arg and then suggests contents
+based on probabilities suggested in BFRPG core rules.
+
+$ dgn 18
+Special
+Monster with Treasure
+Monster
+Monster
+Monster
+Trap
+Monster
+Monster
+Monster with Treasure
+Monster
+Trap
+Trap
+Trap with Treasure
+Unguarded Treasure
+Unguarded Treasure
+Monster with Treasure
+Empty
+Trap with Treasure
+
+
+rl
+==
+Dice roller. Takes sides and number of times to roll as args.
+
+$ rl 3 6
+13
+
