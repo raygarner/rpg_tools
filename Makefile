@@ -15,7 +15,7 @@ options:
 	@echo "CC     = $(CC)"
 
 clean:
-	rm -f $(EXES)
+	rm -f $(EXES) rpg_tools.tar.gz
 
 install: all
 	cp -f $(EXES) $(DEST)
